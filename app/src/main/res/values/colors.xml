@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="orange">#FF9900</color>
+    <color name="orange_a10">#1AFF9900</color>
+    <color name="rose">#FF006B</color>
+
+    <color name="charade">#2A2A37</color>
+    <color name="charade_20">#332A2A37</color>
+    <color name="charade_black">#0E0E12</color>
+    <color name="black">#FF000000</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="silver_chalice">#AFAFAF</color>
+    <color name="white_a50">#80FFFFFF</color>
+    <color name="white_a60">#99FFFFFF</color>
+    <color name="gray_94">#F0F0F0</color>
+</resources>

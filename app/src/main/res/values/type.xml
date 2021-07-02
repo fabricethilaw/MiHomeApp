@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.SmartHome.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.SmartHome.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.SmartHome.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.SmartHome.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="lineHeight">40sp</item>
+    </style>
+
+    <style name="TextAppearance.SmartHome.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="lineHeight">28sp</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="lineHeight">22sp</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.Title" parent="android:TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="fontFamily">@font/sfprotext_bold</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="lineHeight">28sp</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="lineHeight">16sp</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/sfprotext_medium</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/sfprotext_regular</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.BottomNavigation" parent="TextAppearance.SmartHome.Caption">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+
+    </style>
+
+    <style name="TextAppearance.SmartHome.TabTextAppearance" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textAllCaps">true</item>
+        <item name="fontFamily">@font/sfprotext_regular</item>
+        <item name="android:letterSpacing">0.08</item>
+
+    </style>
+
+</resources>

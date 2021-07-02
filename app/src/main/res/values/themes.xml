@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SmartHomeApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:textColor">@color/charade</item>
+        <item name="android:fontFamily">@font/sfprotext_regular</item>
+
+
+        <!--Material type attributes-->
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceOverlay.LargeComponent
+        </item>
+
+        <item name="textAppearanceHeadline2">@style/TextAppearance.SmartHome.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.SmartHome.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.SmartHome.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.SmartHome.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.SmartHome.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.SmartHome.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.SmartHome.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.SmartHome.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.SmartHome.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.App.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.SmartHome.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.SmartHome.Overline</item>
+
+        <item name="android:colorButtonNormal">@color/orange</item>
+        <item name="android:colorControlNormal">@color/light_gray</item>
+        <item name="colorControlNormal">@color/light_gray</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/charade</item>
+        <item name="android:toolbarStyle">@style/Theme.SmartHome.PopupOverlay</item>
+
+        <item name="bottomSheetStyle">@style/BottomSheetDialogTheme</item>
+        <item name="tabStyle">@style/Widget.SmartHome.TabLayout</item>
+    </style>
+
+    <style name="SmartHome" parent="Theme.SmartHomeApp" />
+
+    <style name="SmartHome.White" parent="SmartHome">
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+
+    <style name="Theme.SmartHomeApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TextAppearance.App.Button" parent="TextAppearance.SmartHome.Button">
+        <item name="android:backgroundTint">@color/orange</item>
+    </style>
+
+</resources>

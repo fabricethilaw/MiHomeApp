@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeFragment">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/charade"
+            app:layout_constraintBottom_toBottomOf="@+id/spacer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mediaTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/charade"
+            android:paddingVertical="@dimen/grid_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprotext_bold"
+                android:paddingHorizontal="@dimen/grid_1_7"
+                android:textAppearance="@style/TextAppearance.SmartHome.Title"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/userPicture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Your Home" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/grid_0_5"
+                android:drawableTint="@color/white_a50"
+                android:ellipsize="marquee"
+
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/grid_1_7"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.SmartHome.Caption"
+                android:textColor="@color/white_a50"
+                app:drawableStartCompat="@drawable/ic_location"
+                app:layout_constraintEnd_toStartOf="@id/userPicture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:text="2715 Ash Dr. San Jose, South Dakota 83475" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userPicture"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="@dimen/grid_2"
+                android:layout_marginEnd="@dimen/grid_1_7"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/subtitle"
+                app:layout_constraintDimensionRatio="1.0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title"
+                app:layout_constraintVertical_bias="0.2"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceCircle" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/notificationBadge"
+                android:layout_width="@dimen/grid_1_5"
+                android:layout_height="@dimen/grid_1_5"
+                android:background="@color/rose"
+                app:layout_constraintEnd_toEndOf="@id/userPicture"
+                app:layout_constraintTop_toTopOf="@+id/userPicture"
+                app:shapeAppearance="@style/ShapeAppearanceCircle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/charade"
+            app:layout_constraintBottom_toBottomOf="@+id/spacer"
+            app:layout_constraintEnd_toStartOf="@+id/addRoomOrDevice"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mediaTopBar"
+            app:layout_constraintVertical_bias="0"
+            app:tabIndicatorHeight="@dimen/grid_0_5"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white_a50">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/rooms" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/devices" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabs">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addRoomOrDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:src="@drawable/ic_add"
+            android:tint="@color/white"
+            app:fabCustomSize="38dp"
+            app:layout_constraintEnd_toEndOf="@+id/mediaTopBar"
+            app:layout_constraintTop_toBottomOf="@+id/mediaTopBar" />
+
+        <View
+            android:id="@+id/spacer"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/grid_0_5"
+            app:layout_constraintEnd_toEndOf="@id/addRoomOrDevice"
+            app:layout_constraintStart_toStartOf="@id/addRoomOrDevice"
+            app:layout_constraintTop_toBottomOf="@id/addRoomOrDevice" />
+
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
