@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SmartHomeApp</string>
+    <string name="app_name">Smart Home</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -35,4 +35,11 @@
     <string name="title_speaker">Speaker</string>
     <string name="main_lights">Main Lights</string>
     <string name="hue">Hue</string>
+    <string name="title_activity_login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="click_here"><u>Click here</u></string>
+    <string name="new_resident">New Resident</string>
+    <string name="enter_your_house">Enter Your House</string>
+    <string name="Username">Username</string>
+    <string name="password">Password</string>
 </resources>

@@ -58,4 +58,8 @@
         <item name="android:backgroundTint">@color/orange</item>
     </style>
 
+    <style name="Theme.SmartHomeApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SmartHomeApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
