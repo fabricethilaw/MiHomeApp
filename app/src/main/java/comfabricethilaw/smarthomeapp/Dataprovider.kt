@@ -5,7 +5,7 @@ import comfabricethilaw.smarthomeapp.ui.RoomItem
 val userRooms = mutableListOf<RoomItem>().apply {
     add(
         RoomItem(
-            "Living Room", R.drawable.ic_room_living_room, 3
+           "Living_Room", R.drawable.ic_room_living_room, 3
         )
     )
     add(

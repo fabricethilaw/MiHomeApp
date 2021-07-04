@@ -14,7 +14,10 @@ class HomePagerAdapter(
     }
 
     override fun createFragment(position: Int): Fragment {
-        return RoomsFragment.newInstance()
+        return when (position) {
+            0 -> RoomsFragment.newInstance()
+            else -> DevicesFragment.newInstance()
+        }
     }
 }
 

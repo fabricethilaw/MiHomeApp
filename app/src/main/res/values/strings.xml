@@ -21,4 +21,18 @@
     <string name="add_new">Add new</string>
     <string name="add_new_room">Add new Room</string>
     <string name="add_new_device">Add new Device</string>
+    <string name="thermostat">Thermostat</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="living_room">Living room</string>
+    <string name="temperature_celsius">Temperature,ºC</string>
+    <string name="heating">Heating</string>
+    <string name="cooling">Cooling</string>
+    <string name="title_light">Light</string>
+    <string name="title_thermostat">Thermostat</string>
+    <string name="title_fans">Fans</string>
+    <string name="title_fridge">Fridge</string>
+    <string name="title_speaker">Speaker</string>
+    <string name="main_lights">Main Lights</string>
+    <string name="hue">Hue</string>
 </resources>

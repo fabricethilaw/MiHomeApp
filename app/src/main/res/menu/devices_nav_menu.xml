@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_light"
+        android:icon="@drawable/ic_bulb"
+        android:title="@string/title_light" />
+
+    <item
+        android:id="@+id/navigation_thermostat"
+        android:icon="@drawable/ic_thermostat"
+        android:title="@string/title_thermostat" />
+
+    <item
+        android:id="@+id/navigation_fridge"
+        android:icon="@drawable/ic_fridge"
+        android:title="@string/title_fridge" />
+    <item
+        android:id="@+id/navigation_fans"
+        android:icon="@drawable/ic_fans"
+        android:title="@string/title_fans" />
+
+    <item
+        android:id="@+id/navigation_speaker"
+        android:icon="@drawable/ic_speaker"
+        android:title="@string/title_speaker" />
+</menu>

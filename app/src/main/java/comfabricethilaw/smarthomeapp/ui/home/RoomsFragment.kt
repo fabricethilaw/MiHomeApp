@@ -23,9 +23,13 @@ class RoomsFragment : Fragment() {
     ): View {
         binding = FragmentRoomsBinding.inflate(inflater, container, false)
         binding.list.adapter = listAdapter
-        populateRoomList(listAdapter)
         // Inflate the layout for this fragment
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        populateRoomList(listAdapter)
     }
 
     private fun populateRoomList(adapter: RoomListAdapter) {
@@ -34,7 +38,6 @@ class RoomsFragment : Fragment() {
 
 
     companion object {
-        @JvmStatic
         fun newInstance() = RoomsFragment()
     }
 }
