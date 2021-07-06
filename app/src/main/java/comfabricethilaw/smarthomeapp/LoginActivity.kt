@@ -52,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
     private fun validateInput(
         username: String,
         password: String,
-        onValidationPassed: (String, String) -> Unit
+        onValidationPassed: (validUsername :String, validPassword : String) -> Unit
     ) {
         // add your validation logic
         onValidationPassed.invoke(username, password)

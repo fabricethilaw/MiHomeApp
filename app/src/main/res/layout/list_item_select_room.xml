@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <comfabricethilaw.smarthomeapp.ui.widget.TouchableConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/grid_2">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icon"
+            android:layout_width="72dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/grid_1"
+            android:background="@color/gray_94"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@drawable/ic_room_bathroom"
+            android:tint="@color/silver_chalice"
+            app:contentPadding="@dimen/grid_2"
+            app:layout_constraintDimensionRatio="1.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            app:shapeAppearance="@style/ShapeAppearanceCircle" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/grid_0_5"
+            android:fontFamily="@font/sfprotext_bold"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="12sp"
+            app:autoSizeMaxTextSize="24sp"
+            app:autoSizeMinTextSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon"
+            tools:text="@string/living_room" />
+
+    </comfabricethilaw.smarthomeapp.ui.widget.TouchableConstraintLayout>
+</FrameLayout>

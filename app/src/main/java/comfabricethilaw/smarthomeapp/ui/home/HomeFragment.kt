@@ -69,7 +69,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun showSheetForAddingDeviceOrRoom() {
-        AddDeviceOrRoomBottomSheet().show(parentFragmentManager, "modal")
+        ModalAddDeviceOrRoom().show(parentFragmentManager, "modal")
     }
 
     override fun onDestroyView() {

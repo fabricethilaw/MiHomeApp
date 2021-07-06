@@ -1,12 +1,10 @@
 package comfabricethilaw.smarthomeapp.ui.widget
 
 import android.content.Context
-import android.graphics.PointF
 import android.graphics.Rect
 import android.transition.TransitionManager
 import android.util.AttributeSet
 import android.view.MotionEvent
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -41,38 +39,12 @@ class TouchableCardView : MaterialCardView {
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
-        return when (event.action) {
-            MotionEvent.ACTION_DOWN -> {
-                if (pointInView(PointF(event.x, event.y), this)) {
-                    toggleDownColours()
-                }
-                true
-            }
-            MotionEvent.ACTION_MOVE -> {
-                if (pointInView(PointF(event.x, event.y), this)) {
-                    //toggleDownColours()
-                } else {
-                    toggleLiftColours()
-                }
-                true
-            }
-            MotionEvent.ACTION_UP -> {
-                toggleLiftColours()
-                performClick()
-                true
-            }
-            MotionEvent.ACTION_CANCEL -> {
-                toggleLiftColours()
-                true
-            }
-            else -> false
-        }
+        return handleTouchEvent(
+            event, executeOnTouchDown = { toggleDownColours() },
+            executeOnTouchUp = { toggleLiftColours() }
+        )
     }
 
-
-    private fun pointInView(point: PointF, view: View): Boolean {
-        return view.left <= point.x && point.x <= view.right && view.top <= point.y && point.y <= view.bottom
-    }
 
     private fun toggleDownColours() {
         parentView?.let {
@@ -109,3 +81,4 @@ class TouchableCardView : MaterialCardView {
     }
 
 }
+

@@ -24,7 +24,14 @@
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_add_room_or_device"
-        android:name="comfabricethilaw.smarthomeapp.ui.home.AddDeviceOrRoomBottomSheet"
+        android:name="comfabricethilaw.smarthomeapp.ui.home.ModalAddDeviceOrRoom"
         android:label=""
         tools:layout="@layout/add_device_or_room_modal" />
+
+    <fragment
+        android:id="@+id/navigation_add_room"
+        android:name="comfabricethilaw.smarthomeapp.ui.home.AddRoomFragment"
+        android:label=""
+        tools:layout="@layout/add_room_fragment" />
+
 </navigation>

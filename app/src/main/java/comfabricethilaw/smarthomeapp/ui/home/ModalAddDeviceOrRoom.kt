@@ -7,15 +7,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.getDrawable
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import comfabricethilaw.smarthomeapp.R
 
-class AddDeviceOrRoomBottomSheet : BottomSheetDialogFragment(), View.OnClickListener {
+class ModalAddDeviceOrRoom : BottomSheetDialogFragment(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val customBackgroundDrawable =
             getDrawable(requireContext(), R.drawable.bg_rounded_bottomsheet)
-         dialog?.window?.setBackgroundDrawable(null)
+        dialog?.window?.setBackgroundDrawable(null)
     }
 
     override fun onCreateView(
@@ -40,11 +41,13 @@ class AddDeviceOrRoomBottomSheet : BottomSheetDialogFragment(), View.OnClickList
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_add_new_room -> {
-                Toast.makeText(requireContext(), "Want to add a room", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.navigation_add_room)
             }
             R.id.btn_add_new_device -> {
                 Toast.makeText(requireContext(), "Want to add a device", Toast.LENGTH_SHORT).show()
             }
         }
+
+        dismiss()
     }
 }

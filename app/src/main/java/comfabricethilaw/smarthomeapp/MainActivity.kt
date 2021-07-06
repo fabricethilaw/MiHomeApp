@@ -1,12 +1,16 @@
 package comfabricethilaw.smarthomeapp
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import comfabricethilaw.smarthomeapp.databinding.ActivityMainBinding
+import comfabricethilaw.smarthomeapp.util.hide
+import comfabricethilaw.smarthomeapp.util.show
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +35,14 @@ class MainActivity : AppCompatActivity() {
             )
         )
         // setupActionBarWithNavController(navController, appBarConfiguration)
+        Handler(Looper.getMainLooper()).post {
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+
+            if (controller.currentDestination?.id == R.id.navigation_add_room) {
+                navView.hide()
+            } else navView.show()
+        }
         navView.setupWithNavController(navController)
     }
+}
 }
