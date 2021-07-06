@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <comfabricethilaw.smarthomeapp.ui.widget.TouchableConstraintLayout
+    <comfabricethilaw.mihome.ui.widget.TouchableConstraintLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,5 +47,5 @@
             app:layout_constraintTop_toBottomOf="@id/icon"
             tools:text="@string/living_room" />
 
-    </comfabricethilaw.smarthomeapp.ui.widget.TouchableConstraintLayout>
+    </comfabricethilaw.mihome.ui.widget.TouchableConstraintLayout>
 </FrameLayout>

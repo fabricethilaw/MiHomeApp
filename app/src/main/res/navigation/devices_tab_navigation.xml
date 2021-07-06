@@ -7,31 +7,31 @@
 
     <fragment
         android:id="@+id/navigation_light"
-        android:name="comfabricethilaw.smarthomeapp.ui.home.DevicesLightFragment"
+        android:name="comfabricethilaw.mihome.ui.home.DevicesLightFragment"
         android:label="@string/title_light"
         tools:layout="@layout/devices_light" />
 
     <fragment
         android:id="@+id/navigation_thermostat"
-        android:name="comfabricethilaw.smarthomeapp.ui.home.DevicesThermostatFragment"
+        android:name="comfabricethilaw.mihome.ui.home.DevicesThermostatFragment"
         android:label="@string/title_thermostat"
         tools:layout="@layout/devices_thermostat" />
 
     <fragment
         android:id="@+id/navigation_fridge"
-        android:name="comfabricethilaw.smarthomeapp.ui.home.DevicesFridgeFragment"
+        android:name="comfabricethilaw.mihome.ui.home.DevicesFridgeFragment"
         android:label="@string/title_fridge"
         tools:layout="@layout/devices_fridge" />
 
     <fragment
         android:id="@+id/navigation_fans"
-        android:name="comfabricethilaw.smarthomeapp.ui.home.DevicesFansFragment"
+        android:name="comfabricethilaw.mihome.ui.home.DevicesFansFragment"
         android:label="@string/title_fans"
         tools:layout="@layout/devices_fans" />
 
     <fragment
         android:id="@+id/navigation_speaker"
-        android:name="comfabricethilaw.smarthomeapp.ui.home.DevicesSpeakerFragment"
+        android:name="comfabricethilaw.mihome.ui.home.DevicesSpeakerFragment"
         android:label="@string/title_speaker"
         tools:layout="@layout/devices_speaker" />
 

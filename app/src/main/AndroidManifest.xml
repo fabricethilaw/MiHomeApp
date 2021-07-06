@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="comfabricethilaw.smarthomeapp">
+    package="comfabricethilaw.mihome">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHomeApp">
         <activity
-            android:name=".LoginActivity"
+            android:name="comfabricethilaw.mihome.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.SmartHomeApp.NoActionBar">
             <intent-filter>
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="comfabricethilaw.mihome.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/SmartHome" />
     </application>
