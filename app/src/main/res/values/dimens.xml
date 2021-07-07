@@ -13,4 +13,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="measured_data_label_width">112dp</dimen>
     <dimen name="grid_5">48dp</dimen>
+    <dimen name="button_ripple_radius">96dp</dimen>
 </resources>

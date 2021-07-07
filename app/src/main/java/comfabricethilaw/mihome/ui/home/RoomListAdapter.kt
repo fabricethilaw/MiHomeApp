@@ -40,12 +40,11 @@ class RoomViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val titleView: TextView = itemView.findViewById(R.id.title)
         val subtitleView: TextView = itemView.findViewById(R.id.subtitle)
         val iconView: ImageView = itemView.findViewById(R.id.icon)
-        val card: TouchableCardView = itemView.findViewById<TouchableCardView>(R.id.card)
+        val card: TouchableCardView = itemView.findViewById(R.id.card)
         card.provideParentView(itemView.findViewById(R.id.containerLayout))
         titleView.text = item.name
         val devicesNumbers = "x${item.deviceCount} ${itemView.context.getString(R.string.devices)}"
         subtitleView.text = devicesNumbers
         Glide.with(view).load(item.icon).into(iconView)
     }
-
 }

@@ -16,7 +16,7 @@ import comfabricethilaw.mihome.R
 import comfabricethilaw.mihome.databinding.AddRoomFragmentBinding
 import comfabricethilaw.mihome.ui.ROOM_DIFF_CALLBACK
 import comfabricethilaw.mihome.ui.RoomItem
-import comfabricethilaw.mihome.ui.widget.TouchableConstraintLayout
+import comfabricethilaw.mihome.ui.widget.CheckableFrameLayout
 import comfabricethilaw.mihome.userRooms
 
 class AddRoomFragment : Fragment() {
@@ -41,6 +41,7 @@ class AddRoomFragment : Fragment() {
         }
 
         binding?.inputSearch?.doAfterTextChanged {
+            // todo filter room list
             Toast.makeText(
                 requireContext(), it.toString(),
                 Toast.LENGTH_SHORT
@@ -89,10 +90,15 @@ class SelectViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
     @SuppressLint("ClickableViewAccessibility")
     fun bind(item: RoomItem) {
-        var container = view.findViewById<TouchableConstraintLayout>(R.id.content)
+        val container = view.findViewById<CheckableFrameLayout>(R.id.content)
         container.setText(item.name)
         container.setIcon(item.icon)
-
+        container.setOnCheckedChangeListener(object :
+            CheckableFrameLayout.OnCheckedChangeListener {
+            override fun onCheckedChanged(checkableView: View?, isChecked: Boolean) {
+                // todo track selection
+            }
+        })
     }
 }
 

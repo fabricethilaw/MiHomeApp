@@ -7,7 +7,6 @@
     tools:context=".ui.home.AddRoomFragment">
 
     <com.google.android.material.appbar.AppBarLayout
-        style="@style/Theme.SmartHome.AppBarOverlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -16,30 +15,38 @@
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
             android:background="@color/charade"
-            app:navigationIcon="@drawable/ic_back"
-            app:popupTheme="@style/Theme.SmartHomeApp.PopupOverlay">
+            app:navigationIcon="@drawable/ic_back">
 
-            <FrameLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/title"
                     style="@style/TextAppearance.SmartHome.Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_marginRight="48dp"
                     android:gravity="center"
                     android:text="@string/add_room"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/save"
-                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|end"
-                    android:text="@string/save" />
-            </FrameLayout>
+                    android:text="@string/save"
+                    app:backgroundTint="@color/charade"
+                    app:layout_constraintBaseline_toBaselineOf="@id/title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -60,10 +67,10 @@
                 style="@style/TextAppearance.SmartHome.Caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_3"
                 android:text="@string/enter_room_s_name"
                 android:textColor="@color/ford_gray"
                 android:textStyle="bold"
-                android:layout_marginTop="@dimen/grid_3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
