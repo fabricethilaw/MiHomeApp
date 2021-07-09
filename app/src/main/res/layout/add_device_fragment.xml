@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.AddDeviceFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/charade"
+            app:navigationIcon="@drawable/ic_back">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/TextAppearance.SmartHome.Title"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="48dp"
+                    android:gravity="center"
+                    android:text="@string/add_room"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:text="@string/save"
+                    app:backgroundTint="@color/charade"
+                    app:layout_constraintBaseline_toBaselineOf="@id/title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/grid_2">
+
+            <TextView
+                android:id="@+id/hint"
+
+                android:fontFamily="@font/sfprotext_bold"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_4"
+                android:gravity="center"
+                android:text="@string/plug_in_the_outlet"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@android:id/background"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_dash_stroke_orange"
+                android:src="@drawable/ic_add_new_device"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.78"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hint"
+                app:layout_constraintVertical_bias="0.15"
+                app:layout_constraintWidth_percent="0.6" />
+            <ImageView
+                app:layout_constraintTop_toTopOf="@android:id/background"
+                app:layout_constraintBottom_toBottomOf="@android:id/background"
+                app:layout_constraintStart_toStartOf="@android:id/background"
+                app:layout_constraintEnd_toEndOf="@android:id/background"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintHeight_percent="0.25"
+                android:src="@drawable/ic_add_new_device"
+                android:layout_height="0dp"
+                app:tint="?android:attr/colorPrimary" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

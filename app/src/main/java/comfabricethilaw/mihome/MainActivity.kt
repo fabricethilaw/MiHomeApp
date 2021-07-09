@@ -36,13 +36,17 @@ class MainActivity : AppCompatActivity() {
         )
         // setupActionBarWithNavController(navController, appBarConfiguration)
         Handler(Looper.getMainLooper()).post {
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            navController.addOnDestinationChangedListener { controller, destination, arguments ->
 
-            if (controller.currentDestination?.id == R.id.navigation_add_room) {
-                navView.hide()
-            } else navView.show()
+                if (controller.currentDestination?.id in listOf(
+                        R.id.navigation_add_room,
+                        R.id.navigation_add_device
+                    )
+                ) {
+                    navView.hide()
+                } else navView.show()
+            }
+            navView.setupWithNavController(navController)
         }
-        navView.setupWithNavController(navController)
     }
-}
 }

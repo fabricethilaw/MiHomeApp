@@ -36,4 +36,5 @@
     <string name="add_room">Add Room</string>
     <string name="save">SAVE</string>
     <string name="enter_room_s_name">Enter Room\'s name</string>
+    <string name="plug_in_the_outlet" >Plug in the smart outlet\nyour device wil connect automatically</string>
 </resources>

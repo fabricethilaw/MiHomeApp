@@ -34,4 +34,10 @@
         android:label=""
         tools:layout="@layout/add_room_fragment" />
 
+    <fragment
+        android:id="@+id/navigation_add_device"
+        android:name="comfabricethilaw.mihome.ui.home.AddDeviceFragment"
+        android:label=""
+        tools:layout="@layout/add_device_fragment" />
+
 </navigation>

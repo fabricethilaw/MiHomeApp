@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.getDrawable
 import androidx.navigation.fragment.findNavController
@@ -44,10 +43,9 @@ class ModalAddDeviceOrRoom : BottomSheetDialogFragment(), View.OnClickListener {
                 findNavController().navigate(R.id.navigation_add_room)
             }
             R.id.btn_add_new_device -> {
-                Toast.makeText(requireContext(), "Want to add a device", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.navigation_add_device)
             }
         }
-
         dismiss()
     }
 }
