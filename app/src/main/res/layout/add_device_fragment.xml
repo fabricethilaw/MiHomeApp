@@ -65,13 +65,13 @@
             <TextView
                 android:id="@+id/hint"
 
-                android:fontFamily="@font/sfprotext_bold"
-                android:textSize="12sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/grid_4"
+                android:fontFamily="@font/sfprotext_bold"
                 android:gravity="center"
                 android:text="@string/plug_in_the_outlet"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -91,16 +91,17 @@
                 app:layout_constraintTop_toBottomOf="@id/hint"
                 app:layout_constraintVertical_bias="0.15"
                 app:layout_constraintWidth_percent="0.6" />
+
             <ImageView
-                app:layout_constraintTop_toTopOf="@android:id/background"
-                app:layout_constraintBottom_toBottomOf="@android:id/background"
-                app:layout_constraintStart_toStartOf="@android:id/background"
-                app:layout_constraintEnd_toEndOf="@android:id/background"
                 android:layout_width="0dp"
-                app:layout_constraintWidth_percent="0.25"
-                app:layout_constraintHeight_percent="0.25"
-                android:src="@drawable/ic_add_new_device"
                 android:layout_height="0dp"
+                android:src="@drawable/ic_add_new_device"
+                app:layout_constraintBottom_toBottomOf="@android:id/background"
+                app:layout_constraintEnd_toEndOf="@android:id/background"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toStartOf="@android:id/background"
+                app:layout_constraintTop_toTopOf="@android:id/background"
+                app:layout_constraintWidth_percent="0.25"
                 app:tint="?android:attr/colorPrimary" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
