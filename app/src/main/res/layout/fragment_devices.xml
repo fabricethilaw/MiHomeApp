@@ -16,7 +16,6 @@
         android:background="?android:attr/windowBackground"
         android:paddingHorizontal="@dimen/grid_0_5"
         android:paddingVertical="@dimen/grid_1"
-        app:itemTextAppearanceInactive="@color/light_gray"
         app:labelVisibilityMode="labeled"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
