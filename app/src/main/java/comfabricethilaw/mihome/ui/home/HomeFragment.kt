@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun setTopBarContent(binding: FragmentHomeBinding) {
-        binding.title.text = "Your Home"
+        binding.title.text = getString(R.string.your_home)
         binding.subtitle.text = "2715 Ash Dr. San Jose, South Dakota 83475"
         val userPicture = "https://randomuser.me/api/portraits/women/91.jpg"
         Glide.with(this).load(userPicture).circleCrop().into(binding.userPicture)

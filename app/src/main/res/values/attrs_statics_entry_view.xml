@@ -1,0 +1,11 @@
+<resources>
+    <declare-styleable name="StaticsEntryView">
+        <attr name="value" format="float" />
+        <attr name="unit" format="string" />
+        <attr name="rate" format="float" />
+        <attr name="variation" format="enum">
+            <enum name="Decrease" value="0" />
+            <enum name="Increase" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

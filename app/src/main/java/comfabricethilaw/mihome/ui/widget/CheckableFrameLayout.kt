@@ -10,14 +10,16 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import comfabricethilaw.mihome.R
+import comfabricethilaw.mihome.R.*
 
 
 class CheckableFrameLayout : FrameLayout, Checkable {
     private var mChecked = false
     private var mOnCheckedChangeListener: OnCheckedChangeListener? = null
 
-    private val iconView by lazy { findViewById<ImageView>(comfabricethilaw.mihome.R.id.icon) }
-    private val title by lazy { findViewById<TextView>(comfabricethilaw.mihome.R.id.title) }
+    private val iconView by lazy { findViewById<ImageView>(R.id.icon) }
+    private val title by lazy { findViewById<TextView>(R.id.title) }
 
 
     constructor(context: Context?) : super(context!!) {
@@ -91,16 +93,16 @@ class CheckableFrameLayout : FrameLayout, Checkable {
         title.setTextColor(
             ContextCompat.getColor(
                 title.context,
-                comfabricethilaw.mihome.R.color.orange
+                color.orange
             )
         )
         iconView.backgroundTintList =
             ContextCompat.getColorStateList(
                 iconView.context,
-                comfabricethilaw.mihome.R.color.orange
+                color.orange
             )
         iconView.imageTintList =
-            ContextCompat.getColorStateList(iconView.context, comfabricethilaw.mihome.R.color.white)
+            ContextCompat.getColorStateList(iconView.context, color.white)
 
     }
 
@@ -108,18 +110,18 @@ class CheckableFrameLayout : FrameLayout, Checkable {
         title.setTextColor(
             ContextCompat.getColor(
                 title.context,
-                comfabricethilaw.mihome.R.color.charade
+                color.charade
             )
         )
         iconView.backgroundTintList =
             ContextCompat.getColorStateList(
                 iconView.context,
-                comfabricethilaw.mihome.R.color.gray_94
+                color.gray_94
             )
         iconView.imageTintList =
             ContextCompat.getColorStateList(
                 iconView.context,
-                comfabricethilaw.mihome.R.color.silver_chalice
+                color.silver_chalice
             )
     }
 

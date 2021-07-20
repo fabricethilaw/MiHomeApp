@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.statics.StaticsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mediaTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/charade"
+        android:paddingVertical="@dimen/grid_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprotext_bold"
+            android:paddingHorizontal="@dimen/grid_1_7"
+            android:text="Statics"
+            android:textAppearance="@style/TextAppearance.SmartHome.Title"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/userPicture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userPicture"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="@dimen/grid_2"
+            android:layout_marginEnd="@dimen/grid_1_7"
+            android:padding="2dp"
+            app:layout_constraintDimensionRatio="1.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title"
+            app:shapeAppearance="@style/ShapeAppearanceCircle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/notificationBadge"
+            android:layout_width="@dimen/grid_1_5"
+            android:layout_height="@dimen/grid_1_5"
+            android:background="@color/rose"
+            app:layout_constraintEnd_toEndOf="@id/userPicture"
+            app:layout_constraintTop_toTopOf="@+id/userPicture"
+            app:shapeAppearance="@style/ShapeAppearanceCircle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Placeholder
+        android:id="@+id/anchor_for_graph"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        app:layout_constraintBottom_toTopOf="@id/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card" />
+
+    <FrameLayout
+        android:id="@+id/graph_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/charade"
+        app:layout_constraintBottom_toBottomOf="@id/anchor_for_graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mediaTopBar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/grid_5"
+        android:clipToPadding="false"
+        android:minHeight="?android:attr/actionBarSize"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/grid_2"
+        app:cardElevation="@dimen/grid_1"
+        app:cardUseCompatPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_choose_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_2"
+                android:outlineAmbientShadowColor="?android:attr/colorPrimary"
+                android:text="@string/choose_date"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/grid_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/bullet"
+                android:layout_width="@dimen/grid_2"
+                android:layout_height="@dimen/grid_2"
+                android:layout_marginHorizontal="@dimen/grid_2"
+                android:background="?android:attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/btn_choose_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_choose_date"
+                app:shapeAppearance="@style/ShapeAppearanceCircle" />
+
+            <TextView
+                android:id="@+id/selected_date"
+                style="@style/TextAppearance.SmartHome.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/grid_1_5"
+                android:text="Aug-2020"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/btn_choose_date"
+                app:layout_constraintStart_toEndOf="@id/bullet"
+                app:layout_constraintTop_toTopOf="@id/btn_choose_date" />
+
+            <comfabricethilaw.mihome.ui.widget.StaticsEntryView
+                android:id="@+id/power_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_3"
+                app:layout_constraintEnd_toStartOf="@id/divider_2"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="@+id/bullet"
+                app:layout_constraintTop_toBottomOf="@id/btn_choose_date"
+                app:rate="26"
+                app:unit="KWH"
+                app:value="337.8"
+                app:variation="Decrease" />
+
+            <FrameLayout
+                android:id="@+id/divider_2"
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:background="#4D000000"
+                app:layout_constraintBottom_toBottomOf="@id/power_stats"
+                app:layout_constraintEnd_toStartOf="@id/cost_stats"
+                app:layout_constraintHeight_percent="0.8"
+                app:layout_constraintStart_toEndOf="@+id/power_stats"
+                app:layout_constraintTop_toTopOf="@+id/power_stats" />
+
+            <comfabricethilaw.mihome.ui.widget.StaticsEntryView
+                android:id="@+id/cost_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/power_stats"
+                app:layout_constraintEnd_toEndOf="@+id/btn_choose_date"
+                app:layout_constraintStart_toEndOf="@id/divider_2"
+                app:layout_constraintTop_toTopOf="@+id/power_stats"
+                app:rate="19"
+                app:unit="USD"
+                app:value="163"
+                app:variation="Decrease" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/TextAppearance.SmartHome.Body2"
+                android:layout_width="0dp"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_marginTop="@dimen/grid_3"
+                android:background="@color/blue"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:paddingVertical="@dimen/grid_0_5"
+                android:text="@string/view_detail"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:cornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/power_stats" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
